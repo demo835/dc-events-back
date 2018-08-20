@@ -4,11 +4,7 @@ const Venue = require("./Venue");
 
 const Event = new mongoose.Schema({
   name: String,
-  // venue: Venue,
-  venue: {
-    type: Schema.Types.ObjectId,
-    ref: "Venue"
-  },
+  venue: String,
   description: String,
   food: String,
   cost: Number

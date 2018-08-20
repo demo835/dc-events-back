@@ -56,7 +56,7 @@ app.delete("/events/delete/:id", (req, res) => {
 });
 
 app.put("/events/update/:id", (req, res) => {
-  Event.findByIdAndUpdate({ _id: req.params.id })
+  Event.findOneAndUpdate({ _id: req.params.id }, req.body)
     .then(event => {
       res.json(event);
     })
@@ -71,7 +71,6 @@ app.get("/venues", (req, res) => {
   Venue.find({})
     .then(venues => {
       res.json(venues);
-      res.render("/venues", { venues });
     })
     .catch(err => {
       console.log(err);
