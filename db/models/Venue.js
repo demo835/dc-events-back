@@ -1,10 +1,13 @@
 const mongoose = require("../connection");
 
-const Venue = new mongoose.Schema({
-  name: String,
-  location: String,
-  capacity: Number
-});
+const Venue = new mongoose.Schema(
+  {
+    name: String,
+    location: String,
+    capacity: Number
+  },
+  { collection: "venue" }
+);
 
 module.exports = mongoose.model("Venue", Venue);
 

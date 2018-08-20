@@ -13,8 +13,89 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.get("/add-event", (req, res) => {
-  res.send("Events");
+//  Events Controllers and Routes
+
+app.get("/events", (req, res) => {
+  Event.find()
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/events/:id", (req, res) => {
+  Event.findOne({ _id: req.params.id })
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.post("/events/new", (req, res) => {
+  Event.create(req.body)
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.delete("/events/delete/:id", (req, res) => {
+  Event.findOneAndRemove({ _id: req.params.id })
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.put("/events/update/:id", (req, res) => {
+  Event.findByIdAndUpdate({ _id: req.params.id })
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+// Venues Controllers and Routes
+
+app.get("/venues", (req, res) => {
+  Venue.find({})
+    .then(venues => {
+      res.json(venues);
+      res.render("/venues", { venues });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/venues/:id", (req, res) => {
+  Venue.findOne({ _id: req.params.id })
+    .then(venue => {
+      res.json(venue);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.post("/venues/new", (req, res) => {
+  Venue.create(req.body)
+    .then(venue => {
+      res.json(venue);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 app.listen(app.get("port"), () => {
