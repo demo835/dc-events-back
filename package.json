@@ -1,0 +1,19 @@
+{
+  "name": "dc-events-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demo835/dc-events-back.git"
+  },
+  "author": "Michael Brinsko, Thomas Ferullo, Neil Howard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demo835/dc-events-back/issues"
+  },
+  "homepage": "https://github.com/demo835/dc-events-back#readme"
+}
