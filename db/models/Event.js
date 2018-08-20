@@ -1,9 +1,10 @@
 const mongoose = require("../connection");
-const Venue = require("./Venue");
 const Schema = mongoose.Schema;
+const Venue = require("./Venue");
 
 const Event = new mongoose.Schema({
   name: String,
+  // venue: Venue,
   venue: {
     type: Schema.Types.ObjectId,
     ref: "Venue"
