@@ -1,18 +1,103 @@
-const express = require('express')
-const parser = require('body-parser')
+const express = require("express");
+const parser = require("body-parser");
 // const mongoose = require('./db/schema.js')
-const Event = require("./db/models/Event")
-const Venue = require("./db/models/Venue")
+const Event = require("./db/models/Event");
+const Venue = require("./db/models/Venue");
 
-const app = express()
+const app = express();
 
-app.set('port', process.env.PORT || 3001)
-app.use(parser.json())
+app.set("port", process.env.PORT || 3001);
+app.use(parser.json());
 
-app.get('/', (req, res) => {
-    res.send("Hello World")
-})
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
-app.listen(app.get('port'), () => {
-    console.log("Locked and loaded on " + app.get('port'))
-})
+//  Events Controllers and Routes
+
+app.get("/events", (req, res) => {
+  Event.find()
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/events/:id", (req, res) => {
+  Event.findOne({ _id: req.params.id })
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.post("/events/new", (req, res) => {
+  Event.create(req.body)
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.delete("/events/delete/:id", (req, res) => {
+  Event.findOneAndRemove({ _id: req.params.id })
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.put("/events/update/:id", (req, res) => {
+  Event.findByIdAndUpdate({ _id: req.params.id })
+    .then(event => {
+      res.json(event);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+// Venues Controllers and Routes
+
+app.get("/venues", (req, res) => {
+  Venue.find({})
+    .then(venues => {
+      res.json(venues);
+      res.render("/venues", { venues });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/venues/:id", (req, res) => {
+  Venue.findOne({ _id: req.params.id })
+    .then(venue => {
+      res.json(venue);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.post("/venues/new", (req, res) => {
+  Venue.create(req.body)
+    .then(venue => {
+      res.json(venue);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.listen(app.get("port"), () => {
+  console.log("Locked and loaded on " + app.get("port"));
+});
