@@ -3,7 +3,7 @@
 ## DC-Events
 
 ### Description
-The purpose of the DC Events application is to 
+The purpose of the DC Events application is to provide an easiy to use
 
 ### Features
 
@@ -21,3 +21,7 @@ The purpose of the DC Events application is to
 * HTML
 * CSS
 * Javascript
+* Mongo
+* Express
+* React
+* Node
