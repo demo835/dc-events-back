@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/demo835/dc-events-back/issues"
   },
-  "homepage": "https://github.com/demo835/dc-events-back#readme"
+  "homepage": "https://github.com/demo835/dc-events-back#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
