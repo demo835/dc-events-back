@@ -1,6 +1,8 @@
 const express = require('express')
 const parser = require('body-parser')
 // const mongoose = require('./db/schema.js')
+const Event = require("./db/models/Event")
+const Venue = require("./db/models/Venue")
 
 const app = express()
 
