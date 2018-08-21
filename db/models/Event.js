@@ -5,10 +5,10 @@ const Venue = require("./Venue");
 const Event = new mongoose.Schema(
   {
     name: String,
-    // venue: Venue,
     venue: String,
     description: String,
     food: String,
+    date: String,
     cost: Number
   },
   { collection: "event" }
