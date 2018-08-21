@@ -3,9 +3,10 @@ const parser = require("body-parser");
 // const mongoose = require('./db/schema.js')
 const Event = require("./db/models/Event");
 const Venue = require("./db/models/Venue");
-
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
 app.set("port", process.env.PORT || 3001);
 app.use(parser.json());
 
