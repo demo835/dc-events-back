@@ -10,9 +10,9 @@ app.use(cors());
 app.set("port", process.env.PORT || 3001);
 app.use(parser.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+// app.get("/", (req, res) => {
+//   res.redirect("Hello world");
+// });
 
 //  Events Controllers and Routes
 
@@ -47,9 +47,10 @@ app.post("/events/new", (req, res) => {
 });
 
 app.delete("/events/delete/:id", (req, res) => {
-  Event.findOneAndRemove({ _id: req.params.id })
+  Event.findOneAndRemove({ _id: req.params.id }, req.body)
     .then(event => {
-      res.json(event);
+      // res.json(event);
+      res.redirect("/")
     })
     .catch(err => {
       console.log(err);
@@ -67,6 +68,10 @@ app.put("/events/update/:id", (req, res) => {
 });
 
 // Venues Controllers and Routes
+
+app.get("/", (req, res) => {
+  res.send("Hello world")
+})
 
 app.get("/venues", (req, res) => {
   Venue.find({})

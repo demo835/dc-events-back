@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Hamilton",
+        "img": "http://localhost:3000/images/hamilton-1.jpg",
+        "description": "Musical",
+        "food": "Concessions",
+        "date": "9/2/18",
+        "cost": 100,
+        "venue": "Kennedy Center"
+    },
+    {
+        "name": "Fireworks",
+        "img": "http://localhost:3000/images/hamilton-1.jpg",
+        "description": "Fireworks",
+        "food": "BYOB",
+        "date": "7/4/18",
+        "cost": 0,
+        "venue": "National Mall"
+    }
+]
