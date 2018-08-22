@@ -1,0 +1,22 @@
+[
+{
+  "name": "John F. Kennedy Center for the Performing Arts",
+  "location": "2700 F St NW, Washington, DC 20566",
+  "capacity": 2454
+},
+{
+  "name": "Fords Theatre",
+  "location": "511 10th St NW, Washington, DC 20004",
+  "capacity": 665
+},
+{
+  "name": "Folger Theatre",
+  "location": "201 E Capitol St SE, Washington, DC 20003",
+  "capacity": 250
+},
+{
+  "name": "Warner Theatre",
+  "location": "513 13th St NW, Washington, DC 20004",
+  "capacity": 1847
+}
+]
