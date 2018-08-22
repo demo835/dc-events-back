@@ -11,11 +11,20 @@
   },
   {
     "name": "Born Yesterday",
-    "img": "#",
+    "img": "http://localhost3000/images/bornYesterday-1.jpg",
     "description": "In this sharp-edged satire, opportunistic tycoon Harry Brock arrives in Washington with his naive girlfriend Billie Dawn to game the political system.",
     "food": "NA",
     "date": "September 23, 2018",
     "cost": "$20 - $33",
     "venue": "Ford's Theatre"
+  },
+  {
+  "name": "Celtic Thunder X Tour",
+    "img": "http://localhost3000/images/celticThunder-1.jpg",
+    "description": "A contemporary exploration of Celtic music,.",
+    "food": "NA",
+    "date": "September 15, 2018",
+    "cost": "$46 - $76",
+    "venue": "Warner Theatre"
   }
 ]
