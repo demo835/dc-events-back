@@ -47,9 +47,10 @@ app.post("/events/new", (req, res) => {
 });
 
 app.delete("/events/delete/:id", (req, res) => {
-  Event.deleteOne(req.body)
+  Event.findOneAndRemove({ _id: req.params.id }, req.body)
     .then(event => {
-      res.json(event);
+      // res.json(event);
+      res.redirect("/")
     })
     .catch(err => {
       console.log(err);
