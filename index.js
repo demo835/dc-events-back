@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.set("port", process.env.PORT || 3001);
+// app.set("port", process.env.PORT || 3001);
 app.use(parser.json());
 
 // app.get("/", (req, res) => {
@@ -103,6 +103,14 @@ app.post("/venues/new", (req, res) => {
     });
 });
 
-app.listen(app.get("port"), () => {
-  console.log("Locked and loaded on " + app.get("port"));
-});
+// app.listen(app.get("port"), () => {
+//   console.log("Locked and loaded on " + app.get("port"));
+// });
+
+app.set('port', process.env.PORT || 3001)
+
+app.listen(app.get('port'), () => {
+  console.log(`✅ PORT: ${app.get('port')} 🌟`)
+})
+
+
