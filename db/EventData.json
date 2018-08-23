@@ -1,7 +1,7 @@
 [
     {
     "name": "Hamilton",
-    "img": "http://localhost3000/images/hamilton-1.jpg",
+    "img": "http://localhost:3000/images/hamilton-1.jpg",
     "description": "Hamilton: An American Musical is a sung- and rapped-through musical about the life of American Founding Father Alexander Hamilton",
     "food": "NA",
     "date": "September 16, 2018",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Born Yesterday",
-    "img": "http://localhost3000/images/bornYesterday-1.jpg",
+    "img": "http://localhost:3000/images/bornYesterday-1.jpg",
     "description": "In this sharp-edged satire, opportunistic tycoon Harry Brock arrives in Washington with his naive girlfriend Billie Dawn to game the political system.",
     "food": "NA",
     "date": "September 23, 2018",
@@ -19,7 +19,7 @@
   },
   {
   "name": "Celtic Thunder X Tour",
-    "img": "http://localhost3000/images/celticThunder-1.jpg",
+    "img": "http://localhost:3000/images/celticThunder-1.jpg",
     "description": "A contemporary exploration of Celtic music,.",
     "food": "NA",
     "date": "September 15, 2018",
